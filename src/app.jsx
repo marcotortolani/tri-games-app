@@ -1,33 +1,30 @@
-import { useState } from "preact/hooks";
-import preactLogo from "./assets/preact.svg";
-import viteLogo from "/vite.svg";
+import { Route } from "wouter";
+
+
 import "./app.css";
 
-export function App() {
-  const [count, setCount] = useState(0);
+import Header from "./components/Header";
+import Footer from "./components/Footer";
 
+import Home from "./pages/Home";
+import MemoTest from "./pages/Memotest";
+import Wpm from "./pages/Wpm";
+import Pokemon from "./pages/Pokemon";
+
+export function App() {
   return (
-    <>
-      <div>
-        <a href="https://vitejs.dev" target="_blank">
-          <img src={viteLogo} class="logo" alt="Vite logo" />
-        </a>
-        <a href="https://preactjs.com" target="_blank">
-          <img src={preactLogo} class="logo preact" alt="Preact logo" />
-        </a>
-      </div>
-      <h1>Vite + Preact</h1>
-      <div class="card">
-        <button onClick={() => setCount((count) => count + 1)}>
-          count is {count}
-        </button>
-        <p>
-          Prueba de deploy
-        </p>
-      </div>
-      <p class="read-the-docs">
-        Click on the Vite and Preact logos to learn more
-      </p>
-    </>
+    <div className=" w-12/12 h-full flex flex-col items-center justify-between">
+      <Header />
+
+      <Route path="/">
+        <Home />
+      </Route>
+
+      <Route path="/memotest" component={MemoTest} />
+      <Route path="/wpm" component={Wpm} />
+      <Route path="/pokemon" component={Pokemon} />
+
+      <Footer />
+    </div>
   );
 }
