@@ -1,4 +1,4 @@
-import { BrowserRouter, Routes, Route } from "react-router-dom";
+import { HashRouter, Routes, Route } from "react-router-dom";
 
 import "./app.css";
 
@@ -12,12 +12,12 @@ import Pokemon from "./pages/Pokemon";
 
 export function App() {
   return (
-    <BrowserRouter>
+    <HashRouter>
       <div className=" w-12/12 h-screen flex flex-col items-center justify-around">
         <Header />
 
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />
           <Route path="/memotest" element={<MemoTest />} />
           <Route path="/wpm" element={<Wpm />} />
           <Route path="/pokemon" element={<Pokemon />} />
@@ -25,6 +25,6 @@ export function App() {
 
         <Footer />
       </div>
-    </BrowserRouter>
+    </HashRouter>
   );
 }

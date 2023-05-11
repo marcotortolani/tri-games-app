@@ -1,5 +1,4 @@
 import { useState } from "preact/hooks";
-import { useNavigate } from "react-router-dom";
 
 const POKEMONS = [
   "bulbasaur",
@@ -37,7 +36,6 @@ const POKEMONS = [
 const MATCH = Math.floor(Math.random() * POKEMONS.length);
 
 export default function Pokemon() {
-  const navigate = useNavigate();
   const [hasWon, toggleWon] = useState(false);
 
   function handleSubmit(e) {
@@ -73,7 +71,7 @@ export default function Pokemon() {
       <h3>{POKEMONS[MATCH]}</h3>
 
       {hasWon ? (
-        <button onClick={() => navigate(0)}>Play again</button>
+        <button onClick={() => location.reload()}>Play again</button>
       ) : (
         <form onSubmit={handleSubmit}>
           <input type="text" name="pokemon" autoFocus />
