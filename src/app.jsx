@@ -17,8 +17,7 @@ export function App() {
         <Header />
 
         <Routes>
-          <Route path="/" element={<Home />} />
-
+          <Route exact path="/" element={<Home />} />
           <Route path="/memotest" element={<MemoTest />} />
           <Route path="/wpm" element={<Wpm />} />
           <Route path="/pokemon" element={<Pokemon />} />
