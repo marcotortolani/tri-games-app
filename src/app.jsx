@@ -13,7 +13,7 @@ import Pokemon from "./pages/Pokemon";
 export function App() {
   return (
     <BrowserRouter>
-      <div className=" w-12/12 h-5/6 flex flex-col items-center justify-center">
+      <div className=" w-12/12 h-screen flex flex-col items-center justify-around">
         <Header />
 
         <Routes>

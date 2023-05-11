@@ -15,7 +15,7 @@ const icon = Math.floor(Math.random() * ICONS_GAME.length);
 
 export default function Header() {
   return (
-    <header className="w-full max-w-md flex flex-col sm:flex-row items-center sm:items-end justify-around absolute top-5">
+    <header className="w-full max-w-md flex flex-col sm:flex-row items-center sm:items-end justify-around ">
       <Link to="/">
         <h1 className=" text-xl font-extrabold hover:cursor-pointer hover:text-cyan-500 uppercase">
           <span className="mr-2">{ICONS_GAME[icon]}</span> Tri Games
