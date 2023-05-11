@@ -1,19 +1,8 @@
-import {Link} from 'wouter';
-import {useEffect, useState} from 'react'
-
-import '../app.css'
+import { Link } from "react-router-dom";
 
 
-export default function Footer( ) {
 
-  // useEffect(() => {
-    
-  //   console.log(" home mounted");
-
-  // }, [homeMounted]);
-  
-
-  
+export default function Footer( ) {  
 
   return(
     <footer className=' w-10/12 sm:w-12/12 flex flex-row justify-around items-center absolute bottom-2 mt-4 sm:mb-4'>

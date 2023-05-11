@@ -1,5 +1,4 @@
-import { Route } from "wouter";
-
+import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import "./app.css";
 
@@ -13,18 +12,20 @@ import Pokemon from "./pages/Pokemon";
 
 export function App() {
   return (
-    <div className=" w-12/12 h-full flex flex-col items-center justify-between">
-      <Header />
+    <BrowserRouter>
+      <div className=" w-12/12 h-full flex flex-col items-center justify-between">
+        <Header />
 
-      <Route path="/">
-        <Home />
-      </Route>
+        <Routes>
+          <Route path="/" element={<Home />} />
 
-      <Route path="/memotest" component={MemoTest} />
-      <Route path="/wpm" component={Wpm} />
-      <Route path="/pokemon" component={Pokemon} />
+          <Route path="/memotest" element={<MemoTest />} />
+          <Route path="/wpm" element={<Wpm />} />
+          <Route path="/pokemon" element={<Pokemon />} />
+        </Routes>
 
-      <Footer />
-    </div>
+        <Footer />
+      </div>
+    </BrowserRouter>
   );
 }
