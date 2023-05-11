@@ -6,9 +6,9 @@ import Header from "./components/Header";
 import Footer from "./components/Footer";
 
 import Home from "./pages/Home";
-import MemoTest from "./pages/Memotest";
-import Wpm from "./pages/Wpm";
-import Pokemon from "./pages/Pokemon";
+// import MemoTest from "./pages/Memotest";
+// import Wpm from "./pages/Wpm";
+// import Pokemon from "./pages/Pokemon";
 
 export function App() {
   return (
@@ -19,9 +19,9 @@ export function App() {
         <Routes>
           <Route path="/" element={<Home />} />
 
-          <Route path="/memotest" element={<MemoTest />} />
+          {/* <Route path="/memotest" element={<MemoTest />} />
           <Route path="/wpm" element={<Wpm />} />
-          <Route path="/pokemon" element={<Pokemon />} />
+          <Route path="/pokemon" element={<Pokemon />} /> */}
         </Routes>
 
         <Footer />
