@@ -36,7 +36,7 @@ export default function Footer() {
       )}
 
       <a
-        href="https://mtorto.com/"
+        href="https://github.com/marcotortolani"
         target="blank"
         className="ml-5 flex items-center justify-center border-solid border-white border-2 sm:border-none rounded-lg px-6 pt-2.5 pb-2 text-lg font-bold uppercase text-cyan-500 leading-normal  transition duration-150 ease-in-out hover:bg-neutral-100 hover:text-cyan-700"
       >
